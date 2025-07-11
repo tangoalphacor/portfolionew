@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 // Components
 import Navigation from './components/Navigation.tsx';
-import SimpleHero from './components/SimpleHero.tsx';
+import Hero from './components/Hero.tsx';
 import About from './components/About.tsx';
 import Experience from './components/Experience.tsx';
 import Projects from './components/Projects.tsx';
@@ -26,7 +26,7 @@ function App() {
         <Suspense fallback={<LoadingSpinner />}>
           <div className="space-y-0">
             <section id="home" className="relative">
-              <SimpleHero />
+              <Hero />
             </section>
             
             {/* Section divider */}

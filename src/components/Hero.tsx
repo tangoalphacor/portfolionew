@@ -50,12 +50,23 @@ const Hero: React.FC = () => {
       
       {/* 3D Background */}
       <div className="absolute inset-0 w-full h-full opacity-60">
-        <Canvas camera={{ position: [0, 0, 5] }}>
-          <Suspense fallback={<Html center><div className="text-white">Loading 3D...</div></Html>}>
+        <Canvas 
+          camera={{ position: [0, 0, 5] }}
+          dpr={[1, 2]}
+          performance={{ min: 0.5 }}
+        >
+          <Suspense fallback={<Html center><div className="text-white text-lg">Loading 3D Scene...</div></Html>}>
             <ambientLight intensity={0.3} />
             <directionalLight position={[10, 10, 5]} intensity={0.8} />
             <FloatingGeometry />
-            <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.3} />
+            <OrbitControls 
+              enableZoom={false} 
+              enablePan={false} 
+              autoRotate 
+              autoRotateSpeed={0.3}
+              enableDamping={true}
+              dampingFactor={0.1}
+            />
           </Suspense>
         </Canvas>
       </div>
