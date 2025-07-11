@@ -11,6 +11,7 @@ import Skills from './components/Skills.tsx';
 import Education from './components/Education.tsx';
 import Contact from './components/Contact.tsx';
 import LoadingSpinner from './components/LoadingSpinner.tsx';
+import VisitorCounter from './components/VisitorCounter.tsx';
 
 function App() {
   return (
@@ -96,6 +97,9 @@ function App() {
           />
         ))}
       </div>
+      
+      {/* Visitor Counter */}
+      <VisitorCounter />
     </div>
   );
 }
