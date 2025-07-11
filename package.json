@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://abhinavkannan434.github.io/portfolionew/",
+  "homepage": "https://tangoalphacor.github.io/portfolionew/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
