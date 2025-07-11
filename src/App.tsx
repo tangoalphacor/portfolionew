@@ -15,9 +15,17 @@ import VisitorCounter from './components/VisitorCounter.tsx';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-x-hidden">
-      {/* Background Effects */}
-      <div className="fixed inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-pink-900/10 pointer-events-none" />
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-x-hidden">
+      {/* Professional Background Effects */}
+      <div className="fixed inset-0 bg-gradient-to-br from-blue-900/5 via-indigo-900/5 to-slate-900/10 pointer-events-none" />
+      
+      {/* Subtle grid pattern */}
+      <div className="fixed inset-0 opacity-[0.02] pointer-events-none">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.3) 1px, transparent 0)`,
+          backgroundSize: '48px 48px'
+        }}></div>
+      </div>
       
       {/* Navigation */}
       <Navigation />
@@ -30,43 +38,43 @@ function App() {
               <Hero />
             </section>
             
-            {/* Section divider */}
-            <div className="section-divider"></div>
+            {/* Professional Section divider */}
+            <div className="professional-divider"></div>
             
             <section id="about" className="relative section-bg-secondary">
               <About />
             </section>
             
-            {/* Section divider */}
-            <div className="section-divider"></div>
+            {/* Professional Section divider */}
+            <div className="professional-divider"></div>
             
             <section id="experience" className="relative section-bg-primary">
               <Experience />
             </section>
             
-            {/* Section divider */}
-            <div className="section-divider"></div>
+            {/* Professional Section divider */}
+            <div className="professional-divider"></div>
             
             <section id="projects" className="relative section-bg-tertiary">
               <Projects />
             </section>
             
-            {/* Section divider */}
-            <div className="section-divider"></div>
+            {/* Professional Section divider */}
+            <div className="professional-divider"></div>
             
             <section id="skills" className="relative section-bg-secondary">
               <Skills />
             </section>
             
-            {/* Section divider */}
-            <div className="section-divider"></div>
+            {/* Professional Section divider */}
+            <div className="professional-divider"></div>
             
             <section id="education" className="relative section-bg-primary">
               <Education />
             </section>
             
-            {/* Section divider */}
-            <div className="section-divider"></div>
+            {/* Professional Section divider */}
+            <div className="professional-divider"></div>
             
             <section id="contact" className="relative section-bg-tertiary">
               <Contact />
@@ -75,24 +83,24 @@ function App() {
         </Suspense>
       </main>
       
-      {/* Floating particles background */}
+      {/* Professional floating particles background */}
       <div className="fixed inset-0 pointer-events-none">
-        {[...Array(50)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"
+            className="absolute w-1 h-1 bg-blue-400/30 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -100, 0],
-              opacity: [0.3, 1, 0.3],
+              y: [0, -60, 0],
+              opacity: [0.1, 0.3, 0.1],
             }}
             transition={{
-              duration: 3 + Math.random() * 4,
+              duration: 4 + Math.random() * 6,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: Math.random() * 3,
             }}
           />
         ))}

@@ -8,12 +8,12 @@ const FloatingGeometry: React.FC = () => {
   return (
     <Sphere visible args={[1, 100, 200]} scale={2}>
       <MeshDistortMaterial
-        color="#3b82f6"
+        color="#1d4ed8"
         attach="material"
-        distort={0.3}
-        speed={1.5}
-        roughness={0.4}
-        metalness={0.8}
+        distort={0.2}
+        speed={1.0}
+        roughness={0.2}
+        metalness={0.6}
       />
     </Sphere>
   );
@@ -44,26 +44,26 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden section-bg-primary">
       {/* Dashboard Info Panel */}
       <DashboardInfo className="hidden lg:block" />
       
       {/* 3D Background */}
-      <div className="absolute inset-0 w-full h-full opacity-60">
+      <div className="absolute inset-0 w-full h-full opacity-40">
         <Canvas 
           camera={{ position: [0, 0, 5] }}
           dpr={[1, 2]}
           performance={{ min: 0.5 }}
         >
-          <Suspense fallback={<Html center><div className="text-white text-lg">Loading 3D Scene...</div></Html>}>
-            <ambientLight intensity={0.3} />
-            <directionalLight position={[10, 10, 5]} intensity={0.8} />
+          <Suspense fallback={<Html center><div className="text-slate-200 text-lg">Loading 3D Scene...</div></Html>}>
+            <ambientLight intensity={0.2} />
+            <directionalLight position={[10, 10, 5]} intensity={0.6} color="#3b82f6" />
             <FloatingGeometry />
             <OrbitControls 
               enableZoom={false} 
               enablePan={false} 
               autoRotate 
-              autoRotateSpeed={0.3}
+              autoRotateSpeed={0.2}
               enableDamping={true}
               dampingFactor={0.1}
             />
@@ -71,8 +71,8 @@ const Hero: React.FC = () => {
         </Canvas>
       </div>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40" />
+      {/* Professional Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/10 to-slate-900/20" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
